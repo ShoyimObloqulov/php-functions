@@ -1,0 +1,6 @@
+{
+    "require": {
+        "acamposm/ipv4-address-converter": "^1.0",
+        "guzzlehttp/guzzle": "^7.8"
+    }
+}

@@ -1,0 +1,16 @@
+language: php
+
+php:
+  - 8.0
+
+env:
+  matrix:
+    - COMPOSER_FLAGS="--prefer-lowest"
+
+script:
+  - composer install
+  - composer update
+  - phpunit --coverage-text --coverage-clover=coverage.clover
+
+after_script:
+  - php /home/travis/build/angelcamposm/ipv4-address-converter/vendor/bin/ocular code-coverage:upload --format=php-clover coverage.clover
